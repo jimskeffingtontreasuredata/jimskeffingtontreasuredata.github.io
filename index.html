@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5CXRC7C');</script>
+    <!-- End Google Tag Manager -->
 <title>Treasure Industries</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="w3.css">
 <style>
-body,h1,h2,h3,h4,h5 {font-family: sans-serif}
+    body,h1,h2,h3,h4,h5 {font-family: sans-serif}
 </style>
   
-<!-- Initialize the Treasure Data SDK --> 
 <script type="text/javascript">
-    !function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.5/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);
-</script>
-<!-- Start Tracking with Treasure Data SDK -->
-<script type="text/javascript">
-  // Configure an instance for your database
-  var td = new Treasure({
-    host: 'in.treasuredata.com',
-    writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c',
-    database: 'jim_20220322_ti'
-  });
-  // Enable cross-domain tracking
-  td.set('$global', 'td_global_id', 'td_global_id');
-  // Track pageview information to 'pageviews' table
-  td.trackPageview('<pageviews_table>');
+    <!-- Initialize the Treasure Data SDK --> 
+        !function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.5/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);
+    <!-- End Initialization of the Treasure Data SDK --> 
+    
+    <!-- Start Tracking using Treasure Data SDK -->
+      // Configure an instance for your database
+          var td = new Treasure({
+            host: 'in.treasuredata.com',
+            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c',
+            database: 'jim_20220322_ti'
+          });
+          // Enable cross-domain tracking
+          td.set('$global', 'td_global_id', 'td_global_id');
+          // Track pageview information to 'pageviews' table
+          td.trackPageview('<pageviews_table>');
+    <!-- End Initialization of Treasure Data SDK -->
 </script>
     
     
     
 </head>
 <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CXRC7C"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
