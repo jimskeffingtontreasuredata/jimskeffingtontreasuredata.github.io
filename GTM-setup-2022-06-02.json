@@ -1,0 +1,422 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2022-06-01 01:35:16",
+    "containerVersion": {
+        "path": "accounts/6006217644/containers/66741815/versions/19",
+        "accountId": "6006217644",
+        "containerId": "66741815",
+        "containerVersionId": "19",
+        "name": "via TD Cookie Consent Context(Fuming-demo-dry-run) at 2022-06-01T01:01:12Z",
+        "container": {
+            "path": "accounts/6006217644/containers/66741815",
+            "accountId": "6006217644",
+            "containerId": "66741815",
+            "name": "Demo",
+            "publicId": "GTM-KLKBTRH",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1653359897958",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6006217644/containers/66741815/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "4",
+                "name": "Necessary",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'necessary';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653467048341",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "6",
+                "name": "Tracker1 - Ad",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'ad_storage';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384696730",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "ad_storage"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "7",
+                "name": "Tracker2 - Analytics",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'analytics_storage';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384706322",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "analytics_storage"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "8",
+                "name": "Tracker3 - Functionality",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'functionality_storage';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384714261",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "functionality_storage"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "9",
+                "name": "Tracker4 - Personalization",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'personalization_storage';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384721398",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "personalization_storage"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "10",
+                "name": "Tracker5 - Security",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'security_storage';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384728427",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "security_storage"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "11",
+                "name": "Tracker6 - Unclassified",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<!-- embedded by GTM -->\n<script>\n  var consentName = 'td_unclassified';\n  var $elm = document.querySelector('.consent-cell.' + consentName);\n  $elm.innerHTML = 'granted';\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1653384735798",
+                "firingTriggerId": [
+                    "3"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NEEDED",
+                    "consentType": {
+                        "type": "LIST",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "td_unclassified"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "tagId": "14",
+                "name": "TD Banner Manager",
+                "type": "cvt_66741815_12",
+                "parameter": [
+                    {
+                        "type": "LIST",
+                        "key": "optInRegions",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "DE"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "optOutRegions",
+                        "list": [
+                            {
+                                "type": "TEMPLATE",
+                                "value": "JP"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "contextSettingJsonUrl",
+                        "value": "https://assets-development-cookie-config.treasuredata.com/aws/1/54.json"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "loaderJsUrl",
+                        "value": "https://td-cdn-experiment.s3.amazonaws.com/cookiebanner/1.0.0/loader.js"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultConsentPreferences",
+                        "value": "denied"
+                    }
+                ],
+                "fingerprint": "1654045274186",
+                "firingTriggerId": [
+                    "13"
+                ],
+                "monitoringMetadata": {
+                    "type": "MAP"
+                },
+                "consentSettings": {
+                    "consentStatus": "NOT_SET"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "triggerId": "3",
+                "name": "Show current consent trigger",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cmp_demo.show_current"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1653359960942"
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "triggerId": "13",
+                "name": "TD Banner Manager trigger",
+                "type": "CONSENT_INIT",
+                "fingerprint": "1653379262076"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1654045276809",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6006217644/containers/66741815/versions/19?apiLink=version",
+        "customTemplate": [
+            {
+                "accountId": "6006217644",
+                "containerId": "66741815",
+                "templateId": "12",
+                "name": "TD Cookie Consent Management",
+                "fingerprint": "1653560937555",
+                "templateData": "___INFO___\n{\n  \"type\": \"TAG\",\n  \"id\": \"cvt_temp_public_id\",\n  \"version\": 1,\n  \"securityGroups\": [],\n  \"displayName\": \"TD Cookie Consent Management\",\n  \"brand\": {\n    \"id\": \"brand_dummy\",\n    \"displayName\": \"Treasure Data\"\n  },\n  \"containerContexts\": [\n    \"WEB\"\n  ]\n}\n\n\n\n___TEMPLATE_PARAMETERS___\n[\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"contextSettingJsonUrl\",\n    \"displayName\": \"Context Setting JSON URL\",\n    \"simpleValueType\": true\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"loaderJsUrl\",\n    \"displayName\": \"loader.js URL\",\n    \"simpleValueType\": true\n  },\n  {\n    \"type\": \"SELECT\",\n    \"name\": \"defaultConsentPreferences\",\n    \"displayName\": \"Default Consent Preferences\",\n    \"selectItems\": [\n      {\n        \"value\": \"denied\",\n        \"displayValue\": \"opt-in\"\n      },\n      {\n        \"value\": \"granted\",\n        \"displayValue\": \"opt-out\"\n      }\n    ],\n    \"simpleValueType\": true,\n    \"alwaysInSummary\": true\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"optInRegions\",\n    \"displayName\": \"Opt-In Regions\",\n    \"simpleValueType\": true,\n    \"textAsList\": true\n  },\n  {\n    \"type\": \"TEXT\",\n    \"name\": \"optOutRegions\",\n    \"displayName\": \"Opt-Out Regions\",\n    \"simpleValueType\": true,\n    \"textAsList\": true\n  }\n]\n\n\n\n___SANDBOXED_JS_FOR_WEB_TEMPLATE___\nconst injectScript = require('injectScript');\nconst encodeUriComponent = require('encodeUriComponent');\nconst queryPermission = require('queryPermission');\nconst setDefaultConsentState =require('setDefaultConsentState');\nconst logToConsole = require('logToConsole');\nconst Object = require('Object');\nconst localStorage = require('localStorage');\nconst JSON = require('JSON');\nconst isConsentGranted = require('isConsentGranted');\nconst updateConsentState = require('updateConsentState');\nconst callLater = require('callLater');\n\nconst WAIT_FOR_UPDATE = 1000; // ms\n\nsetDefaultConsentState({\n  'ad_storage': data.defaultConsentPreferences,\n  'analytics_storage': data.defaultConsentPreferences,\n  'functionality_storage': data.defaultConsentPreferences,\n  'personalization_storage': data.defaultConsentPreferences,\n  'security_storage': data.defaultConsentPreferences,\n\n  'td_unclassified': data.defaultConsentPreferences,\n\n  'wait_for_update': WAIT_FOR_UPDATE\n});\n\nconst optInRegions = data.optInRegions;\nif (optInRegions && optInRegions.length > 0) {\n  logToConsole('optInRegions =' + JSON.stringify(optInRegions));\n  setDefaultConsentState({\n    'ad_storage': 'denied',\n    'analytics_storage': 'denied',\n    'functionality_storage': 'denied',\n    'personalization_storage': 'denied',\n    'security_storage': 'denied',\n\n    'td_unclassified': 'denied',\n\n    'wait_for_update': WAIT_FOR_UPDATE,\n    'region': optInRegions,\n  });\n}\n\nconst optOutRegions = data.optOutRegions;\nif (optOutRegions && optOutRegions.length > 0) {\n  logToConsole('optOutRegions =' + JSON.stringify(optOutRegions));\n  setDefaultConsentState({\n    'ad_storage': 'granted',\n    'analytics_storage': 'granted',\n    'functionality_storage': 'granted',\n    'personalization_storage': 'granted',\n    'security_storage': 'granted',\n\n    'td_unclassified': 'granted',\n\n    'wait_for_update': WAIT_FOR_UPDATE,\n    'region': optOutRegions,\n  });\n}\n\n// We need to update permission if the key is modified.\nconst LOCAL_STORAGE_KEY = 'td_consent_preferences';\n\nconst rawData = localStorage.getItem(LOCAL_STORAGE_KEY);\nconst savedPreferences = JSON.parse(rawData || '{}');\n\nconst urlParameters = {\n  lastConsentUpdatedAt: null,\n  s: data.contextSettingJsonUrl,\n};\n\nif (savedPreferences.createdAt) {\n  logToConsole('Found the saved preferences');\n  logToConsole(savedPreferences);\n  urlParameters.lastConsentUpdatedAt = savedPreferences.createdAt;\n  const consents = {};\n  savedPreferences.consents.forEach(consent => {\n    if (consent.gtmConsentName) {\n      consents[consent.gtmConsentName] = consent.status;\n    }\n  });\n\n  logToConsole('update consent status with the following parameter');\n  logToConsole(consents);\n  updateConsentState(consents);\n}\n\nconst consents = [\n  'ad_storage',\n  'analytics_storage',\n  'functionality_storage',\n  'personalization_storage',\n  'security_storage',\n  'td_unclassified',\n];\n\ncallLater(function() {\n  logToConsole('callLater triggerred!');\n\n  logToConsole('--- current consent ---');\n  consents.forEach(consentName => {\n    const val = isConsentGranted(consentName) ? 'granted' : 'denied';\n    logToConsole(consentName + ' = ' + val);\n    urlParameters[consentName] = val;\n  });\n\n  const queries = Object.entries(urlParameters).map(function(arr) {\n    const key = arr[0];\n    const raw = arr[1] || '';\n    logToConsole(raw);\n    const val = encodeUriComponent(raw);\n    logToConsole(val);\n    return key.toString() + \"=\" + val;\n  }).join('&');\n\n  const scriptUrl = data.loaderJsUrl + '?' + queries;\n  logToConsole(scriptUrl);\n\n  if (queryPermission('inject_script', scriptUrl)) {\n    injectScript(scriptUrl, data.gtmOnSuccess, data.gtmOnFailure);\n  } else {\n    data.gtmOnFailure();\n  }\n}, WAIT_FOR_UPDATE / 2);\n\n\n\n___WEB_PERMISSIONS___\n[\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"logging\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"environments\",\n          \"value\": {\n            \"type\": 1,\n            \"string\": \"debug\"\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"inject_script\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"urls\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 1,\n                \"string\": \"https://td-jssdk.s3.amazonaws.com/*\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"https://td-cdn-experiment.s3.amazonaws.com/*\"\n              },\n              {\n                \"type\": 1,\n                \"string\": \"https://cdn.treasuredata.com/*\"\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_consent\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"consentTypes\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"ad_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"analytics_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"functionality_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"personalization_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"security_storage\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"wait_for_update\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"region\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": false\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              },\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"consentType\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"td_unclassified\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  },\n  {\n    \"instance\": {\n      \"key\": {\n        \"publicId\": \"access_local_storage\",\n        \"versionId\": \"1\"\n      },\n      \"param\": [\n        {\n          \"key\": \"keys\",\n          \"value\": {\n            \"type\": 2,\n            \"listItem\": [\n              {\n                \"type\": 3,\n                \"mapKey\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"key\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"read\"\n                  },\n                  {\n                    \"type\": 1,\n                    \"string\": \"write\"\n                  }\n                ],\n                \"mapValue\": [\n                  {\n                    \"type\": 1,\n                    \"string\": \"td_consent_preferences\"\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  },\n                  {\n                    \"type\": 8,\n                    \"boolean\": true\n                  }\n                ]\n              }\n            ]\n          }\n        }\n      ]\n    },\n    \"clientAnnotations\": {\n      \"isEditedByUser\": true\n    },\n    \"isRequired\": true\n  }\n]\n\n\n\n___TESTS___\nscenarios: []\n\n\n\n___NOTES___\nCreated by Treasure Data CMP (Version 0.0.1)\n\n"
+            }
+        ]
+    }
+}
