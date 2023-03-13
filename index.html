@@ -1,111 +1,183 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            {box-sizing: border-box;}
-            /* Button used to open the contact form - fixed at the bottom of the page */
-            .open-button {
-              background-color: #555;
-              color: white;
-              padding: 16px 20px;
-              border: none;
-              cursor: pointer;
-              opacity: 0.8;
-              position: fixed;
-              bottom: 23px;
-              right: 28px;
-              width: 280px;
-            }
-
-            /* The popup form - hidden by default */
-            .form-popup {
-              display: none;
-              position: fixed;
-              bottom: 0;
-              right: 15px;
-              border: 3px solid #f1f1f1;
-              z-index: 9;
-            }
-
-            /* Add styles to the form container */
-            .form-container {
-              max-width: 300px;
-              padding: 10px;
-              background-color: white;
-            }
-
-            /* Full-width input fields */
-            .form-container input[type=text], .form-container input[type=password] {
-              width: 100%;
-              padding: 15px;
-              margin: 5px 0 22px 0;
-              border: none;
-              background: #f1f1f1;
-            }
-
-            /* When the inputs get focus, do something */
-            .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-              background-color: #ddd;
-              outline: none;
-            }
-
-            /* Set a style for the submit/login button */
-            .form-container .btn {
-              background-color: #04AA6D;
-              color: white;
-              padding: 16px 20px;
-              border: none;
-              cursor: pointer;
-              width: 100%;
-              margin-bottom:10px;
-              opacity: 0.8;
-            }
-
-            /* Add a red background color to the cancel button */
-            .form-container .cancel {
-              background-color: red;
-            }
-
-            /* Add some hover effects to buttons */
-            .form-container .btn:hover, .open-button:hover {
-              opacity: 1;
-            }
-        </style>
-    </head>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-    
-    <!-- A button to open the popup form -->
-<button class="open-button" onclick="openForm()">Open Form</button>
-
-<!-- The form -->
-<div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
-
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="btn">Login</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-    
-<script>
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
+<head>
+<title>Treasure Industries</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: sans-serif}
+</style>
+  
+<!-- Initialize the Treasure Data SDK --> 
+<script type="text/javascript">
+    !function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],n=0;n<s.length;n++){var c=s[n];e[t].prototype[c]=r(c)}var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/2.5/td.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)}}("Treasure",this);
 </script>
+<!-- Start Tracking with Treasure Data SDK -->
+<script type="text/javascript">
+  // Configure an instance for your database
+  var td = new Treasure({
+    host: 'in.treasuredata.com',
+    writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c',
+    database: 'jim_20220322_ti'
+  });
+  // Enable cross-domain tracking
+  td.set('$global', 'td_global_id', 'td_global_id');
+  // Track pageview information to 'pageviews' table
+  td.trackPageview('<pageviews_table>');
+</script>
+    
+    
+    
+</head>
+<body>
 
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button">Treasure<br>Industries</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-dropdown-hover">
+      <button class="w3-padding-large w3-button" title="More"> More Here <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="page_one.html" class="w3-bar-item w3-button">Automotive</a>
+        <a href="page_two.html" class="w3-bar-item w3-button">Consumer Goods</a>
+        <a href="page_three.html" class="w3-bar-item w3-button">Retail</a>
+        <a href="page_four.html" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="images/architect.jpg" alt="" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-black">
+        <span class="w3-padding w3-margin"><b>Treasure</b></span> 
+        <span class="w3-padding w3-margin w3-white w3-opacity-min">Industries</span> 
+    </h1>
+  </div>
+</header>
+<div class="w3-container w3-padding-32"></div>
     
+<!-- Page content -->
+<div class="w3-content w3-padding-large" style="max-width:1564px">
     
+  <!-- Personalized Section -->
+    <div class="w3-container">
+        <div class="w3-card w3-cell w3-mobile w3-padding-large" style="width:50%">
+                <img src="images/ceo_img_2.jpg" alt="" style="width:100%">
+            <div class="w3-container ">
+              <h4><b>Welcome!</b></h4>
+                <p>My name is Brooke and I'd like to personally welcome you to Treasure Industries.</p>
+                <p>Feel free to browse around, and when you're ready to chat, please share your contact information with us using the contact form below.</p>
+                <p>Again, Welcome!</p>
+            </div>
+        </div>
+
+        <div class="w3-card w3-cell w3-hover-opacity w3-padding-large" style="width:50%">
+            <a href="page_one.html">
+                <img src="images/retail_2.jpg" alt="" style="width:100%">
+            </a>
+            <div class="w3-container">
+                <h4><b>Industry of Note: Retail</b></h4>
+                <p>We think you'd enjoy learning more about the products that Treasure Industries provides to the retail industry.</p>
+             </div>
+        </div>
+    </div>
+
+  <!--Industries Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Verticals We Support</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container w3-hover-opacity">
+        <div class="w3-display-topleft w3-black w3-padding">Automotive</div>
+        <a href="page_one.html">
+            <img src="images/auto.jpg" alt="" style="width:99%">
+        </a>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container w3-hover-opacity">
+        <div class="w3-display-topleft w3-black w3-padding">Consumer Packaged Goods</div>
+        <a href="page_one.html">
+            <img src="images/cpg.jpg" alt="" style="width:99%">
+        </a>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container w3-hover-opacity">
+        <div class="w3-display-topleft w3-black w3-padding">Retail</div>
+        <a href="page_one.html">
+            <img src="images/retail.jpg" alt="" style="width:99%">
+        </a>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container w3-hover-opacity">
+        <div class="w3-display-topleft w3-black w3-padding">Media and Publishing</div>
+        <a href="page_one.html">
+            <img src="images/publishing.jpg" alt="" style="width:99%">
+        </a>
+      </div>
+    </div>
+  </div>
+    
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container ">
+        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Life Sciences</div>
+        <img src="images/life_sciences.jpg" alt="" style="width:99%" class="w3-opacity-max">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container ">
+        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Financial Services</div>
+        <img src="images/finance.jpg" alt="" style="width:99%" class="w3-opacity-max">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container ">
+        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Communications</div>
+        <img src="images/communications.jpg" alt="" style="width:99%" class="w3-opacity-max">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container ">
+        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Gaming</div>
+        <img src="images/gaming.jpg" alt="" style="width:99%" class="w3-opacity-max">
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Let's get in touch.</p>
+    <form action="handle_contact_form_submit.php" method="post">
+   <!-- <form action="contact_form_submitted.php" onsubmit="handleFormSubmit()" --> 
+      <input class="w3-input w3-border" type="text" placeholder="First Name" required name="html_first_name">
+   <!--      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="html_email_address"> -->
+   <!--      <input class="w3-input w3-section w3-border" type="text" placeholder="Phone" required name="html_phone_number"> -->
+   <!--      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="html_subject_line"> -->
+   <!--      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="html_comments" id="comment_text"> -->
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+</footer>
+
 </body>
 </html>
