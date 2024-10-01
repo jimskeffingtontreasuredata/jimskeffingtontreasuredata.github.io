@@ -189,7 +189,10 @@
             event.preventDefault(); // Prevents the default action of the link (navigation)
             
             // Your JavaScript code here
-            console.log("Link clicked!");
+                console.log("Link clicked!");
+                  td.trackEvent('button', {
+                    number: 1
+                  });
 
             // After your custom JS, if you still want to navigate to index.html
             window.location.href = 'index.html';
