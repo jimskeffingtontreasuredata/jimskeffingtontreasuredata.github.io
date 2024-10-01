@@ -28,6 +28,9 @@
         };
         // Send it to the 'sales' table
         company.addRecord('sales', sale);
+    
+        // Send page view data to the pageviews table
+        company.trackPageview('pageviews');
         
 </script>
 </head>
