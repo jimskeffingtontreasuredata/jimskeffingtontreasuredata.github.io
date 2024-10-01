@@ -190,8 +190,9 @@
             
             // Your JavaScript code here
                 console.log("Link clicked!");
-                  td.trackEvent('button', {
-                    number: 1
+                  td.trackEvent('button', {  // add to table named 'button'
+                    number: 1,  // add the standard data, plus this datapoint called 'number'
+                    button_name: 'homepage_button' // also, add this piece of data
                   });
 
             // After your custom JS, if you still want to navigate to index.html
