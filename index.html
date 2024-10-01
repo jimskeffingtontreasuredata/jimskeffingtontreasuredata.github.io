@@ -21,6 +21,9 @@
         });
       // Enable cross-domain tracking
           td.set('$global', 'td_global_id', 'td_global_id');
+
+    // Enable cookie tracking
+        td.setSignedMode()
         
         // Create a data object with the properties you want to send
         var sale = {
