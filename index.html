@@ -14,14 +14,10 @@
 !function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],s=0;s<r.length;s++){var c=r[s];e[t].prototype[c]=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}}(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/4.0/td.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)}}("Treasure",this);
     
     <!-- Start Tracking using Treasure Data SDK -->
-      // Configure an instance for your database
-          var td = new Treasure({
-            host: 'in.treasuredata.com',  // Specify the Treasure Data host
-            database: 'jim_20241001_b_db', // Replace with your actual database name
-            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c' // Replace with your actual write key
-          });
-        // Send pageview data to TD
-        td.trackPageview('pageviews');
+      var td = new Treasure({
+        database: 'jim_20241001_c_db',
+        writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c'
+      });
         
 </script>
 </head>
