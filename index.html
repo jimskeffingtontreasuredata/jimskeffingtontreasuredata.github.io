@@ -15,17 +15,13 @@
     
     <!-- Start Tracking using Treasure Data SDK -->
       // Configure an instance for your database
-          var jim_ti_db = new Treasure({
+          var td = new Treasure({
             host: 'in.treasuredata.com',  // Specify the Treasure Data host
             database: 'jim_20241001_b_db', // Replace with your actual write key
             writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c' // Replace with your actual database name
           });
-    <!-- End Initialization of Treasure Data SDK -->
-
-    <!-- Send data to the database -->
         // Send pageview data to TD
-        jim_ti_db.trackPageview('pageviews');
-
+        td.trackPageview('pageviews');
         
 </script>
 </head>
