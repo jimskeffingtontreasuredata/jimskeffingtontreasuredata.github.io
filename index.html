@@ -23,21 +23,12 @@
     
     <!-- Start Tracking using Treasure Data SDK -->
       // Configure an instance for your database
-          var td = new Treasure({
-//          host: 'in.treasuredata.com',
-            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c',
-            database: 'jim_20241001_ti'
+          var jim_ti_db = new Treasure({
+            database: 'jim_20241001_b_db',
+            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c'
           });
-    
-          // Enable cross-domain tracking
-          td.set('$global', 'td_global_id', 'td_global_id');
-
-
-    
-          // Track pageview information to 'pageviews' table
-          td.trackPageview('<pageviews_table>');
-
     <!-- End Initialization of Treasure Data SDK -->
+        
 </script>
     
     
