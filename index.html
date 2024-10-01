@@ -183,16 +183,18 @@
 </footer>
 
 <!-- Scripts -->
-    <!-- on clicking the homepage button, trigger a TRACK event -->
-    document.getElementById('treasureLink').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevents the default action of the link (navigation)
-    
-    // Your JavaScript code here
-    console.log("Link clicked!");
-    
-    // After your custom JS, if you still want to navigate to index.html
-    window.location.href = 'index.html';
-});
+    <script>
+        // TRACK event //
+        document.getElementById('treasureLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the default action of the link (navigation)
+            
+            // Your JavaScript code here
+            console.log("Link clicked!");
+
+            // After your custom JS, if you still want to navigate to index.html
+            window.location.href = 'index.html';
+        });
+    </script>
 
 
 </body>
