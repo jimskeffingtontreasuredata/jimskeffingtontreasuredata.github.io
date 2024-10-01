@@ -17,7 +17,17 @@
         var td = new Treasure({
             host: 'us01.records.in.treasuredata.com',
             database: 'jim_20241001_c_db',
-            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c'
+            writeKey: '11672/7c378a1788018896877634264bb98af1c6de549c',
+              consentManager: {
+                storageKey: 'storage key',
+             //   successConsentCallback: function () {},
+             //   failureConsentCallback: function () {},
+             //   expiredConsentsCallback: function () {},
+                consentTable: 'consent_table',
+                contextTable: 'context_table',
+                issuer: 'name of the consent management platform - eg TD',
+                dateFormat: 'YYYY-MM-DD'
+  }
         });
       // Enable cross-domain tracking
           td.set('$global', 'td_global_id', 'td_global_id');
