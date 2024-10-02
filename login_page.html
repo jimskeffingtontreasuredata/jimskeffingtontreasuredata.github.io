@@ -31,7 +31,7 @@
   <div class="w3-card-4 w3-light-grey w3-padding-large">
     <h2 class="w3-center">Log In</h2>
 
-    <form action="handle_login.php" method="post">
+    <form id="loginForm">
       <label for="username">Username</label>
       <input class="w3-input w3-border w3-margin-bottom" type="text" id="username" name="username" required>
 
@@ -48,10 +48,14 @@
   <p>Powered by Treasure Industries</p>
 </footer>
 
-  <script>
-
-    
-  </script>
+<!-- JavaScript -->
+<script>
+  // Add event listener to the form
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents form submission to the server
+    console.log('success'); // Logs 'success' to the console
+  });
+</script>
 
   
 
