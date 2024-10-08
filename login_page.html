@@ -58,14 +58,17 @@
     const password = document.getElementById('password').value;
 
     const data = {
-      username: username,
-      password: password
+    //  username: username,
+    //  password: password,
+        "email": "10.firstname.lastname@business.com",
+        "telephone": "10-555-555-5540" 
     };
 
-    fetch('https://api.example.com/login', {
+    fetch('https://in.treasuredata.com/postback/v3/event/jim_20241001_c_db/postback_api_table', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'X-TD-Write-Key': '11672/7c378a1788018896877634264bb98af1c6de549c'
       },
       body: JSON.stringify(data),
     })
