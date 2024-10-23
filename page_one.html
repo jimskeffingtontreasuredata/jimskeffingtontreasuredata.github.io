@@ -114,17 +114,26 @@ body,h1,h2,h3,h4,h5 {font-family: sans-serif}
     </div>
   </div>  
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact_section">
+<!-- Contact Section -->
+<div class="w3-container w3-padding-32" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Let's get in touch.</p>
+    
+    <?php
+    session_start();
+    if (isset($_SESSION['success_message'])) {
+        echo "<p>" . $_SESSION['success_message'] . "</p>";
+        unset($_SESSION['success_message']); // Clear the message after displaying
+    }
+    ?>
+    
     <form action="handle_contact_form_submit.php" method="post">
-      <input class="w3-input w3-border" type="text" placeholder="First Name" required name="html_first_name">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
+        <input class="w3-input w3-border" type="text" placeholder="First Name" required name="html_first_name">
+        <button class="w3-button w3-black w3-section" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
     </form>
-  </div>
+</div>
 
 <!-- End page content -->
 </div>
