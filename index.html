@@ -200,6 +200,7 @@
 
     // Fetch the Treasure Data Global ID
     td.fetchGlobalID(function(td_global_id) {
+      
       // Retrieve form values
       const email_address = document.getElementById('html_email_address').value;
       const phone_number = document.getElementById('html_phone_number').value;
@@ -216,7 +217,7 @@
       };
 
       // Send the form data, including the global ID, to Treasure Data
-      fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
+      fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_contact_us_table', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
