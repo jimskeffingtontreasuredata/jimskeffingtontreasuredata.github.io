@@ -219,16 +219,17 @@
   document.getElementById('contact_us_form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevents form submission to the server
 
-    const username = document.getElementById('html_email_address').value;
-    const password = document.getElementById('html_phone_number').value;
-    const username = document.getElementById('html_subject_line').value;
-    const password = document.getElementById('html_comments').value;
+    const email_address = document.getElementById('html_email_address').value;
+    const phone_number = document.getElementById('html_phone_number').value;
+    const subject_line = document.getElementById('html_subject_line').value;
+    const comments = document.getElementById('html_comments').value;
 
     const data = {
-        email: html_email_address,
-        telephone: html_phone_number,
-        subject: html_subject_line,
-        comments: html_comments
+        // left side = column name in TD table; right side = variable name //
+        email: email_address,
+        telephone: phone_number,
+        subject: subject_line,
+        comments: comments
     };
 
     fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
@@ -236,7 +237,6 @@
       headers: {
         'Content-Type': 'application/json',
         'X-TD-Write-Key': '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
-    //    'Access-Control-Allow-Origin': *
       },
       body: JSON.stringify(data),
     })
