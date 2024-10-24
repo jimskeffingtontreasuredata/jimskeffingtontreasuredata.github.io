@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Treasure Industries</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="w3.css">
-<style>
+  <title>Treasure Industries</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="w3.css">
+  <style>
     body,h1,h2,h3,h4,h5 {font-family: sans-serif}
-</style>
+  </style>
   
-<script type="text/javascript">
-<!-- Initalize the Treasure Data SDK -->
-!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],s=0;s<r.length;s++){var c=r[s];e[t].prototype[c]=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}}(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/4.0/td.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)}}("Treasure",this);
-    
+  <script type="text/javascript">
+  <!-- Initialize the Treasure Data SDK -->
+  !function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=["addRecord","blockEvents","fetchServerCookie","fetchGlobalID","fetchUserSegments","resetUUID","ready","setSignedMode","setAnonymousMode","set","trackEvent","trackPageview","trackClicks","unblockEvents"],s=0;s<r.length;s++){var c=r[s];e[t].prototype[c]=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}}(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/4.0/td.min.js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o)}}("Treasure",this);
+
     <!-- Start Tracking using Treasure Data SDK -->
-        var td = new Treasure({
-            host: 'us01.records.in.treasuredata.com',
-            database: 'ti_database',
-            writeKey: '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
-              consentManager: {
-                storageKey: 'storage key',
-             //   successConsentCallback: function () {},
-             //   failureConsentCallback: function () {},
-             //   expiredConsentsCallback: function () {},
-                consentTable: 'consent_table',
-                contextTable: 'context_table',
-                issuer: 'name of the consent management platform - eg TD',
-                dateFormat: 'YYYY-MM-DD'
-  }
-        });
-      // Enable cross-domain tracking
-          td.set('$global', 'td_global_id', 'td_global_id');
+    var td = new Treasure({
+      host: 'us01.records.in.treasuredata.com',
+      database: 'ti_database',
+      writeKey: '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
+      consentManager: {
+        storageKey: 'storage key',
+        consentTable: 'consent_table',
+        contextTable: 'context_table',
+        issuer: 'TD',
+        dateFormat: 'YYYY-MM-DD'
+      }
+    });
+
+    // Enable cross-domain tracking
+    td.set('$global', 'td_global_id', 'td_global_id');
 
     // Enable cookie tracking
-        td.setSignedMode()
-        
-        // Create a data object with the properties you want to send
-        var sale = {
-          itemId: 102,
-          saleId: 1000,
-          userId: 12
-        };
-        // Send it to the 'sales' table
-        td.addRecord('sales', sale);
+    td.setSignedMode();
     
-        // Send page view data to the pageviews table
-        td.trackPageview('pageviews');
-        
-</script>
+    // Create a data object with the properties you want to send
+    var sale = {
+      itemId: 102,
+      saleId: 1000,
+      userId: 12
+    };
+
+    // Send it to the 'sales' table
+    td.addRecord('sales', sale);
+
+    // Send page view data to the pageviews table
+    td.trackPageview('pageviews');
+  </script>
 </head>
 <body>
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button" id="treasureLink">Treasure<br>Industries</a>  
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-dropdown-hover">
-      <button class="w3-padding-large w3-button" title="More"> More Here <i class="fa fa-caret-down"></i></button>     
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="index.html" class="w3-bar-item w3-button" id="treasureLink">Treasure<br>Industries</a>  
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-dropdown-hover">
+        <button class="w3-padding-large w3-button" title="More"> More Here <i class="fa fa-caret-down"></i></button>     
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
           <a href="page_one.html" class="w3-bar-item w3-button">Automotive</a>
           <a href="page_two.html" class="w3-bar-item w3-button">Consumer Goods</a>
@@ -64,199 +62,180 @@
           <a href="page_four.html" class="w3-bar-item w3-button">Media</a>
           <a href="login_page.html" class="w3-bar-item w3-button">Log In</a>
         </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="images/architect.jpg" alt="" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-black">
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="images/architect.jpg" alt="" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-black">
         <span class="w3-padding w3-margin"><b>Treasure</b></span> 
         <span class="w3-padding w3-margin w3-white w3-opacity-min">Industries</span> 
-    </h1>
-  </div>
-</header>
-<div class="w3-container w3-padding-32"></div>
+      </h1>
+    </div>
+  </header>
+  <div class="w3-container w3-padding-32"></div>
     
-<!-- Page content -->
-<div class="w3-content w3-padding-large" style="max-width:1564px">
+  <!-- Page content -->
+  <div class="w3-content w3-padding-large" style="max-width:1564px">
     
-  <!-- Personalized Section -->
+    <!-- Personalized Section -->
     <div class="w3-container">
-        <div class="w3-card w3-cell w3-mobile w3-padding-large" style="width:50%">
-                <img src="images/ceo_img_2.jpg" alt="" style="width:100%">
-            <div class="w3-container ">
-              <h4><b>Welcome!</b></h4>
-                <p>My name is Brooke and I'd like to personally welcome you to Treasure Industries.</p>
-                <p>Feel free to browse around, and when you're ready to chat, please share your contact information with us using the contact form below.</p>
-                <p>Again, Welcome!</p>
-            </div>
+      <div class="w3-card w3-cell w3-mobile w3-padding-large" style="width:50%">
+        <img src="images/ceo_img_2.jpg" alt="" style="width:100%">
+        <div class="w3-container">
+          <h4><b>Welcome!</b></h4>
+          <p>My name is Brooke and I'd like to personally welcome you to Treasure Industries.</p>
+          <p>Feel free to browse around, and when you're ready to chat, please share your contact information with us using the contact form below.</p>
+          <p>Again, Welcome!</p>
         </div>
+      </div>
 
-        <div class="w3-card w3-cell w3-hover-opacity w3-padding-large" style="width:50%">
-            <a href="page_one.html">
-                <img src="images/retail_2.jpg" alt="" style="width:100%">
-            </a>
-            <div class="w3-container">
-                <h4><b>Industry of Note: Retail</b></h4>
-                <p>We think you'd enjoy learning more about the products that Treasure Industries provides to the retail industry.</p>
-             </div>
+      <div class="w3-card w3-cell w3-hover-opacity w3-padding-large" style="width:50%">
+        <a href="page_one.html">
+          <img src="images/retail_2.jpg" alt="" style="width:100%">
+        </a>
+        <div class="w3-container">
+          <h4><b>Industry of Note: Retail</b></h4>
+          <p>We think you'd enjoy learning more about the products that Treasure Industries provides to the retail industry.</p>
         </div>
+      </div>
     </div>
 
-  <!--Industries Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Verticals We Support</h3>
-  </div>
+    <!--Industries Section -->
+    <div class="w3-container w3-padding-32" id="projects">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Verticals We Support</h3>
+    </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-hover-opacity">
-        <div class="w3-display-topleft w3-black w3-padding">Automotive</div>
-        <a href="page_one.html">
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container w3-hover-opacity">
+          <div class="w3-display-topleft w3-black w3-padding">Automotive</div>
+          <a href="page_one.html">
             <img src="images/auto.jpg" alt="" style="width:99%">
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-hover-opacity">
-        <div class="w3-display-topleft w3-black w3-padding">Consumer Packaged Goods</div>
-        <a href="page_one.html">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container w3-hover-opacity">
+          <div class="w3-display-topleft w3-black w3-padding">Consumer Packaged Goods</div>
+          <a href="page_one.html">
             <img src="images/cpg.jpg" alt="" style="width:99%">
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-hover-opacity">
-        <div class="w3-display-topleft w3-black w3-padding">Retail</div>
-        <a href="page_one.html">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container w3-hover-opacity">
+          <div class="w3-display-topleft w3-black w3-padding">Retail</div>
+          <a href="page_one.html">
             <img src="images/retail.jpg" alt="" style="width:99%">
-        </a>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container w3-hover-opacity">
-        <div class="w3-display-topleft w3-black w3-padding">Media and Publishing</div>
-        <a href="page_one.html">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container w3-hover-opacity">
+          <div class="w3-display-topleft w3-black w3-padding">Media and Publishing</div>
+          <a href="page_one.html">
             <img src="images/publishing.jpg" alt="" style="width:99%">
-        </a>
+          </a>
+        </div>
       </div>
+    </div>
+
+    <div class="w3-row-padding">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Life Sciences</div>
+          <img src="images/life_sciences.jpg" alt="" style="width:99%" class="w3-opacity-max">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Financial Services</div>
+          <img src="images/finance.jpg" alt="" style="width:99%" class="w3-opacity-max">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Communications</div>
+          <img src="images/communications.jpg" alt="" style="width:99%" class="w3-opacity-max">
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Hospitality</div>
+          <img src="images/hospitality.jpg" alt="" style="width:99%" class="w3-opacity-max">
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Us Form -->
+    <div class="w3-container w3-padding-32" id="contact_us">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact Us</h3>
+
+      <form id="contact_us_form">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="html_email_address" id="html_email_address">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Phone" required name="html_phone_number" id="html_phone_number">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="html_subject_line" id="html_subject_line">
+        <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="html_comments" id="html_comments">
+        <button class="w3-button w3-black w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+
     </div>
   </div>
-    
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container ">
-        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Life Sciences</div>
-        <img src="images/life_sciences.jpg" alt="" style="width:99%" class="w3-opacity-max">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container ">
-        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Financial Services</div>
-        <img src="images/finance.jpg" alt="" style="width:99%" class="w3-opacity-max">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container ">
-        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Communications</div>
-        <img src="images/communications.jpg" alt="" style="width:99%" class="w3-opacity-max">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container ">
-        <div class="w3-display-topleft w3-black w3-padding w3-opacity-max">Gaming</div>
-        <img src="images/gaming.jpg" alt="" style="width:99%" class="w3-opacity-max">
-      </div>
-    </div>
-  </div>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>Let's get in touch.</p>
-    <form id="contact_us_form">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="html_email_address">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Phone" required name="html_phone_number">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="html_subject_line">
-      <input class="w3-input w3-section w3-border" type="text" placeholder="Comment" required name="html_comments" id="comment_text">
-      <button class="w3-button w3-black w3-section" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </form>
-  </div>
+  <script>
+    // TRACK event //
+    document.getElementById('treasureLink').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevents the default action of the link (navigation)
+      console.log("Link clicked!");
+      td.trackEvent('event_homepage_button_clicked', {
+        number: 1,
+        button_name: 'homepage_button'
+      });
+      window.location.href = 'index.html';
+    });
 
-<!-- End page content -->
-</div>
+    // Form Handler //
+    document.getElementById('contact_us_form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevents form submission to the server
 
+      const email_address = document.getElementById('html_email_address').value;
+      const phone_number = document.getElementById('html_phone_number').value;
+      const subject_line = document.getElementById('html_subject_line').value;
+      const comments = document.getElementById('html_comments').value;
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-</footer>
-
-<!-- Scripts -->
-    <script>
-        // TRACK event //
-        document.getElementById('treasureLink').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevents the default action of the link (navigation)
-            
-            // Your JavaScript code here
-                console.log("Link clicked!");
-                  td.trackEvent('event_homepage_button_clicked', {  // add to table named 'XYZ'
-                    number: 1,  // add the standard data, plus this datapoint called 'number'
-                    button_name: 'homepage_button' // also, add this piece of data
-                  });
-
-            // After your custom JS, if you still want to navigate to index.html
-            window.location.href = 'index.html';
-        });
-
-
-<!-- Form Handler -->
-  // Add event listener to the form
-  document.getElementById('contact_us_form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents form submission to the server
-
-    const email_address = document.getElementById('html_email_address').value;
-    const phone_number = document.getElementById('html_phone_number').value;
-    const subject_line = document.getElementById('html_subject_line').value;
-    const comments = document.getElementById('html_comments').value;
-
-    const data = {
-        // left side = column name in TD table; right side = variable name //
+      const data = {
         email: email_address,
         telephone: phone_number,
         subject: subject_line,
         comments: comments
-    };
+      };
 
-    fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-TD-Write-Key': '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
-      },
-      body: JSON.stringify(data),
-    })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Success:', data);
-      // You can redirect or show a success message here
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      // Handle error (e.g., show an error message)
+      fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-TD-Write-Key': '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
+        },
+        body: JSON.stringify(data),
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        console.log('Success:', response);
+        alert('Your message has been sent successfully!');
+        document.getElementById('contact_us_form').reset();  // Reset form fields
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
     });
-  });
-</script>
-
-
+  </script>
 </body>
 </html>
