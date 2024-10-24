@@ -177,7 +177,7 @@
   <div class="w3-container w3-padding-32" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Let's get in touch.</p>
-    <form action="handle_contact_form_submit.php" method="post">
+    <form>
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="html_email_address"> -->
       <input class="w3-input w3-section w3-border" type="text" placeholder="Phone" required name="html_phone_number"> -->
       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="html_subject_line"> -->
@@ -212,7 +212,46 @@
             // After your custom JS, if you still want to navigate to index.html
             window.location.href = 'index.html';
         });
-    </script>
+
+
+<!-- Form Handler -->
+  // Add event listener to the form
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents form submission to the server
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const data = {
+        email: username,
+        telephone: password
+    };
+
+    fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-TD-Write-Key': '10602/6d45ce6d8eab619c917dd4f1c98f9000cc7658e6',
+    //    'Access-Control-Allow-Origin': *
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Success:', data);
+      // You can redirect or show a success message here
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      // Handle error (e.g., show an error message)
+    });
+  });
+</script>
 
 
 </body>
