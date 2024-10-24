@@ -193,24 +193,30 @@
       });
       window.location.href = 'index.html';
     });
+    
+  // Form Handler //
+  document.getElementById('contact_us_form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevents form submission to the server
 
-    // Form Handler //
-    document.getElementById('contact_us_form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevents form submission to the server
-
+    // Fetch the Treasure Data Global ID
+    td.fetchGlobalID(function(td_global_id) {
+      // Retrieve form values
       const email_address = document.getElementById('html_email_address').value;
       const phone_number = document.getElementById('html_phone_number').value;
       const subject_line = document.getElementById('html_subject_line').value;
       const comments = document.getElementById('html_comments').value;
 
+      // Build data object, including the global ID
       const data = {
         email: email_address,
         telephone: phone_number,
         subject: subject_line,
-        comments: comments
+        comments: comments,
+        td_global_id: td_global_id // Include the global ID here
       };
 
-      fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_contact_us_table', {
+      // Send the form data, including the global ID, to Treasure Data
+      fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -230,6 +236,8 @@
         console.error('Error:', error);
       });
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
