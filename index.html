@@ -177,7 +177,7 @@
   <div class="w3-container w3-padding-32" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
     <p>Let's get in touch.</p>
-    <form>
+    <form id="contact_us_form">
       <input class="w3-input w3-section w3-border" type="text" placeholder="Email" required name="html_email_address"> -->
       <input class="w3-input w3-section w3-border" type="text" placeholder="Phone" required name="html_phone_number"> -->
       <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="html_subject_line"> -->
@@ -216,15 +216,19 @@
 
 <!-- Form Handler -->
   // Add event listener to the form
-  document.getElementById('loginForm').addEventListener('submit', function(event) {
+  document.getElementById('contact_us_form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevents form submission to the server
 
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('html_email_address').value;
+    const password = document.getElementById('html_phone_number').value;
+    const username = document.getElementById('html_subject_line').value;
+    const password = document.getElementById('html_comments').value;
 
     const data = {
-        email: username,
-        telephone: password
+        email: html_email_address,
+        telephone: html_phone_number,
+        subject: html_subject_line,
+        comments: html_comments
     };
 
     fetch('https://in.treasuredata.com/postback/v3/event/ti_database/ti_postback_api_table', {
