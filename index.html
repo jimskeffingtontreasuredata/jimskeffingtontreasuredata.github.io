@@ -195,6 +195,8 @@
     });
     
   // Form Handler //
+    // Note that this form handled doesn't work with Treasure Data due to Across-Control-Allow-Origin settings with the TD server //
+    // The workaround - install a CORS broswer extension to bypass these access contorls //
   document.getElementById('contact_us_form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevents form submission to the server
 
